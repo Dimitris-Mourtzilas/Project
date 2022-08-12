@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    {% if users %}
+    {% for user in users %}
+        {{ users.firstName }}
+        {% endfor %}
+        {% else %}
+        <h2>No user currently active</h2>
+            <button><a href="{{ url('add_user') }}">Add user</a></button>
+    {% endif %}
+
+{% endblock %}
