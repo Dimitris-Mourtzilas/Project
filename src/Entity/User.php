@@ -48,6 +48,31 @@ class User
      */
     private $role;
 
+    /**
+     * @ORM\Column(type="string",length=255,nullable=false)
+     *
+     */
+    private $password;
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
