@@ -2,10 +2,45 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    {% if form %}
-{{ form_start(form) }}
 
-        {{ form_end(form) }}
-    {% endif %}
+<form>
+<div class="form-group">
+    <div class="form-control">
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" id="firstName">
+    </div>
+
+    <div class="form-control">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+    </div>
+
+
+    <div class="form-control">
+        <label for="nickName">Nick Name</label>
+        <input type="text" name="nickName" id="nickName">
+    </div>
+
+    <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+
+
+    <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+
+
+    <div class="form-control">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add user</button>
+</div>
+</form>
+
   {% endblock %}
 
